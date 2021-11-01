@@ -13,6 +13,8 @@ local GS, zf, strF = GetString, zo_strformat, string.format
 local USPF_LTF = LibTableFunctions
 if not USPF_LTF then return end
 
+USPF.ZoneId2SetId = {}
+
 USPF.settings = {
 	title = {font = "ProseAntique",},
 	GSP = {
@@ -614,10 +616,22 @@ end
 local function GetGDQuestTooltipText(dungeon)
 	local questName = GetQuestName(USPF.data.GD[dungeon])
 	local list = {FormatQuestName(questName, selectedChar == GCCId() and GCQI(USPF.data.GD[dungeon]) ~= "").."\n"}
+	for _, setid in ipairs(USPF.ZoneId2SetId[USPF.data.ZId.GDN[dungeon]]) do
+		local numtotal = GetNumItemSetCollectionPieces(setid)
+		local numcollected = GetNumItemSetCollectionSlotsUnlocked(setid)
+		local cost = GetItemReconstructionCurrencyOptionCost(setid,5)
+		if cost == nil then cost = 75 end
+		if numtotal > 0 then -- old sets have numtotal = 0
+			table.insert(list,ColorCompletion(string.format("%s (%d/%d) [%d]", LibSets.GetSetName(setid), numcollected, numtotal, cost), numcollected == numtotal))
+		end
+	end
+	table.insert(list, "\n")
 	for _, char in ipairs(USPF.charData) do
 		local val = USPF.sVar.ptsData[char.charId].GD[dungeon]
 		table.insert(list, ColorCompletion(char.charName, val == 1))
 	end
+
+--(string.format("@#@#@#@  %s %d", dungeon, USPF.data.ZId.GDN[dungeon]))
 	return table.concat(list, "\n")
 end
 
@@ -690,6 +704,16 @@ end
 
 local function getTooltipMaelstrom()
 	local list = {}
+	for _, setid in ipairs(USPF.ZoneId2SetId[635]) do
+		local numtotal = GetNumItemSetCollectionPieces(setid)
+		local numcollected = GetNumItemSetCollectionSlotsUnlocked(setid)
+		local cost = GetItemReconstructionCurrencyOptionCost(setid,5)
+		if cost == nil then cost = 75 end
+		if numtotal > 0 then -- old sets have numtotal = 0
+			table.insert(list,ColorCompletion(string.format("%s (%d/%d)[%d]", LibSets.GetSetName(setid), numcollected, numtotal, cost), numcollected == numtotal))
+		end
+	end
+	table.insert(list, "\n")
 	for _, char in ipairs(USPF.charData) do
 		local val = USPF.sVar.ptsData[char.charId].MaelAr
 		table.insert(list, ColorCompletion(val, val == 1) .. "  " .. char.charName)
@@ -1599,6 +1623,27 @@ function USPF:CreateListHolders()
 	USPF:UpdateDataLines()
 end
 
+function USPF:GetSetInfo()
+
+	if LibSets.checkIfSetsAreLoadedProperly() then
+		local setids = LibSets.GetAllSetIds()
+		for setid, valb in pairs(setids) do
+			local zoneids = LibSets.GetZoneIds(setid)
+			if zoneids ~= nil then 
+				for j = 1,#zoneids do
+					if USPF.ZoneId2SetId[zoneids[j]] == nil then 
+						USPF.ZoneId2SetId[zoneids[j]] = {} 
+					end
+					table.insert(USPF.ZoneId2SetId[zoneids[j]], setid)							
+				end
+			end
+		end
+	else
+		d("#### notloaded properly...nooooooooooo")
+	end	
+end
+
+
 function USPF:SetupValues()
 	--Reset All Points to Zero.
 	USPF.ptsData = USPF_LTF:SimpleResetTable(USPF.ptsData, 0)
@@ -1869,6 +1914,11 @@ local function USPF_PlayerDeactivated(eventCode)
 	USPF_ResetSelectedCharacter()
 end
 
+local function USPF_SetCollectionUpdated(eventCode)
+	d("@#@#@# Stickerbook updated")
+	USPF_ResetSelectedCharacter()
+end
+
 local function USPF_Initialized(eventCode, addonName)
 	if addonName ~= USPF.AddonName then return end
 
@@ -1904,6 +1954,9 @@ local function USPF_Initialized(eventCode, addonName)
 	--Create the options menu.
 	USPF:SetupMenu(charId)
 
+	--Get Setinfo for stickerbook info
+	USPF:GetSetInfo()
+
 	--Call startup routine.
 	USPF:SetupValues()
 
@@ -1914,6 +1967,7 @@ local function USPF_Initialized(eventCode, addonName)
 	EVENT_MANAGER:RegisterForEvent(USPF.AddonName, EVENT_ACHIEVEMENT_AWARDED, USPF_AchComplete)
 	EVENT_MANAGER:RegisterForEvent(USPF.AddonName, EVENT_PLAYER_ACTIVATED, USPF_PlayerActivated)
 	EVENT_MANAGER:RegisterForEvent(USPF.AddonName, EVENT_PLAYER_DEACTIVATED, USPF_PlayerDeactivated)
+	EVENT_MANAGER:RegisterForEvent(USPF.AddonName, EVENT_ITEM_SET_COLLECTIONS_UPDATED, USPF_SetCollectionUpdated)
 
 	--Kill the initial event handler.
 	EVENT_MANAGER:UnregisterForEvent(USPF.AddonName, EVENT_ADD_ON_LOADED)

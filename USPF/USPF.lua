@@ -76,7 +76,7 @@ USPF.ptsData = {
 		EP2 = 0, EP3 = 0, EP4 = 0, EP5 = 0, CH  = 0, CAD  = 0, CDC  = 0, CEP  = 0,
 		CMT = 0, LCL = 0, UCL = 0, CC  = 0, DB  = 0, IC   = 0, MW   = 0, RO   = 0,
 		TG  = 0, SU  = 0, MM  = 0, NE  = 0, WP  = 0, SE   = 0, WS   = 0, TR   = 0,
-		BW  = 0, TD  = 0,
+		BW  = 0, TD  = 0, HI  = 0, GY  = 0,
 	},
 	SS = {
 		AD0 = 0, AD1 = 0, AD2 = 0, AD3 = 0, AD4 = 0, AD5  = 0, DC0a = 0, DC0b = 0,
@@ -84,7 +84,7 @@ USPF.ptsData = {
 		EP2 = 0, EP3 = 0, EP4 = 0, EP5 = 0, CH  = 0, CAD  = 0, CDC  = 0, CEP  = 0,
 		CMT = 0, LCL = 0, UCL = 0, IC  = 0, WR  = 0, HB   = 0, GC   = 0, VV   = 0,
 		CC  = 0, MQ  = 0, SU  = 0, MM  = 0, NE  = 0, SE   = 0, WS   = 0, TR   = 0,
-		BW  = 0, TD  = 0,
+		BW  = 0, TD  = 0, HI  = 0, GY  = 0,
 	},
 	GD = {
 		BC1 = 0, BC2 = 0, EH1 = 0, EH2 = 0, CA1 = 0, CA2 = 0, TI = 0, SW = 0,
@@ -92,19 +92,20 @@ USPF.ptsData = {
 		FG1 = 0, FG2 = 0, DC1 = 0, DC2 = 0, AC  = 0, DK  = 0, BC = 0, VM = 0,
 		WGT = 0, ICP = 0, RM  = 0, CS  = 0, BF  = 0, FH  = 0, FL = 0, SP = 0,
 		MHK = 0, MOS = 0, DoM = 0, FV  = 0, LM  = 0, MF  = 0, IR = 0, UG = 0,
-		SG  = 0, CT  = 0, BDV = 0, TC  = 0, RPB = 0, TDC = 0,
+		SG  = 0, CT  = 0, BDV = 0, TC  = 0, RPB = 0, TDC = 0, CA = 0, SR = 0,
+		ERE = 0, GD  = 0, BS  = 0, SH  = 0,
 	},
 	PD = {
 		AD1 = 0, AD2 = 0, AD3 = 0, AD4 = 0, AD5 = 0, DC1 = 0, DC2 = 0, DC3 = 0,
 		DC4 = 0, DC5 = 0, EP1 = 0, EP2 = 0, EP3 = 0, EP4 = 0, EP5 = 0, CH  = 0,
 		VFW = 0, VNC = 0, WOO = 0, WRK = 0, SKW = 0, SSH = 0, RN  = 0, OC  = 0,
-		LT  = 0, NK  = 0, SH  = 0, ZA  = 0
+		LT  = 0, NK  = 0, SH  = 0, ZA  = 0, GHB = 0, SCC = 0,
 	},
 }
 
 USPF.ptsTots = {	--Tot and GenTot are 494 and 129 because you can't do more than one DLC tutorial.
-	Tot		= 494, GenTot = 129, ZQTot	= 124, numSSTot	= 501, SSTot  = 167,
-	GDTot	=  46, PDTot  =  28, Level	=  64, MainQ	=  11, FolDis =   2,
+	Tot		= 524, GenTot = 129, ZQTot	= 138, numSSTot	= 525, SSTot  = 175,
+	GDTot	=  52, PDTot  =  30, Level	=  64, MainQ	=  11, FolDis =   2,
 	MWChar	=   1, SUChar =   1, EWChar	=   1, GMChar	=   1, BWChar =   1,
 	PvPRank	=  50, MaelAr =   1,
 	ZQ = {
@@ -113,7 +114,7 @@ USPF.ptsTots = {	--Tot and GenTot are 494 and 129 because you can't do more than
 		EP2 = 3, EP3 = 3, EP4 =  3, EP5 = 3, CH  = 3, CAD  = 0, CDC  = 0, CEP  = 0,
 		CMT = 0, LCL = 0, UCL =  0, CC  = 8, DB  = 8, IC   = 1, MW   = 3, RO   = 3,
 		TG  = 6, SU  = 3, MM  =  7, NE  = 3, WP  = 0, SE   = 9, WS   = 3, TR   = 9,
-		BW  = 3, TD  = 9,
+		BW  = 3, TD  = 9, HI  =  5, GY  = 9
 	},
 	SS = {
 		AD0  = 6,  AD1 = 16, AD2 = 16, AD3 = 16, AD4 = 16, AD5 = 16, DC0a = 3,
@@ -122,6 +123,7 @@ USPF.ptsTots = {	--Tot and GenTot are 494 and 129 because you can't do more than
 		CAD  = 15, CDC = 15, CEP = 15, CMT = 1,  LCL = 12, UCL = 6,  IC   = 13,
 		WR   = 17, HB  = 6,  GC  = 6,  VV  = 18, CC  = 6,  MQ  = 1,  SU   = 18,
 		MM   = 6,  NE  = 18, SE  = 6,  WS  = 18, TR  = 6,  BW  = 18, TD   = 6,
+		HI   = 18, GY = 6
 	},
 	GD = {
 		BC1 = 1, BC2 = 1, EH1 = 1, EH2 = 1, CA1 = 1, CA2 = 1, TI = 1, SW = 1,
@@ -129,13 +131,14 @@ USPF.ptsTots = {	--Tot and GenTot are 494 and 129 because you can't do more than
 		FG1 = 1, FG2 = 1, DC1 = 1, DC2 = 1, AC  = 1, DK  = 1, BC = 1, VM = 1,
 		WGT = 1, ICP = 1, RM  = 1, CS  = 1, BF  = 1, FH  = 1, FL = 1, SP = 1,
 		MHK = 1, MOS = 1, DoM = 1, FV  = 1, LM  = 1, MF  = 1, IR = 1, UG = 1,
-		SG  = 1, CT  = 1, BDV = 1, TC  = 1, RPB = 1, TDC = 1,
+		SG  = 1, CT  = 1, BDV = 1, TC  = 1, RPB = 1, TDC = 1, CA = 1, SR = 1,
+		ERE = 1, GD  = 1, BS  = 1, SH  = 1,
 	},
 	PD = {
 		AD1 = 1, AD2 = 1, AD3 = 1, AD4 = 1, AD5 = 1, DC1 = 1, DC2 = 1, DC3 = 1,
 		DC4 = 1, DC5 = 1, EP1 = 1, EP2 = 1, EP3 = 1, EP4 = 1, EP5 = 1, CH  = 1,
 		VFW = 1, VNC = 1, WOO = 1, WRK = 1, SKW = 1, SSH = 1, RN  = 1, OC  = 1,
-		LT  = 1, NK  = 1, SH  = 1, ZA  = 1
+		LT  = 1, NK  = 1, SH  = 1, ZA  = 1, GHB = 1, SCC = 1,
 	},
 }
 
@@ -148,7 +151,7 @@ local tempZId = {
 		CEP  =  181, CMT  =  181, CL   =  888, LCL =  888, UCL = 888, IC  =  584,
 		RO   =  684, HB   =  816, GC   =  823, VV  =  849, CC  = 980, SU  = 1011,
 		MM   =  726, NE   = 1086, WP   =  586, SE  = 1133, WS = 1160, BGC = 1161,
-		TR   = 1207, BW   = 1261, TD   = 1286,
+		TR   = 1207, BW   = 1261, TD   = 1286, HI  = 1318, GY = 1383
 	},
 	GDN = {
 		BC1 =  380, BC2 =  935, EH1 =  126, EH2 =  931, CA1 =  176, CA2 =  681,
@@ -158,131 +161,122 @@ local tempZId = {
 		ICP =  678, WGT =  688, CS  =  848, RM  =  843, BF  =  973, FH  =  974,
 		FL  = 1009, SP  = 1010, MHK = 1052, MOS = 1055, DoM = 1081, FV  = 1080,
 		LM  = 1123, MF  = 1122, IR  = 1152, UG  = 1153, SG  = 1197, CT  = 1201,
-		BDV = 1228, TC  = 1229, RPB = 1267, TDC = 1268,
+		BDV = 1228, TC  = 1229, RPB = 1267, TDC = 1268, CA  = 1301, SR  = 1302,
+		ERE = 1360, GD  = 1361, BS  = 1389, SH =  1390, 
 	},
 	PDN = {
 		AD1 =  486, AD2 =  124, AD3 =  137, AD4 =  138, AD5 =  487, DC1 =  284,
 		DC2 =  142, DC3 =  162, DC4 =  308, DC5 =  169, EP1 =  216, EP2 =  306,
 		EP3 =  134, EP4 =  339, EP5 =  341, CH  =  557, WOO =  706, WRK =  705,
 		VFW =  919, VNC =  918, SKW = 1020, SSH = 1021, RN  = 1089, OC  = 1090,
-		LT  = 1186, NK  = 1187, SH  = 1260, ZA  = 1259,
+		LT  = 1186, NK  = 1187, SH  = 1260, ZA  = 1259, GHB = 1338, SCC = 1337,
 	},
 }
 
 USPF.data = {
 	ZId = tempZId,
 	MAAch = 1304,
-	MQAch = 1003,
-	ZQAch = {
-		AD1 =  943, AD2 =  944, AD3 =  945, AD4 =  946, AD5 =  947, CC  = 2064,
-		CH  =  957, DB  = 1444, DC1 =  953, DC2 =  954, DC3 =  955, DC4 =  956,
-		DC5 =  958, EP1 =  948, EP2 =  949, EP3 =  950, EP4 =  951, EP5 =  952,
-		IC  = 1175, RO  = 1260, TG  = 1363, SU  = 2208, MM  = 2339, NE  = 2488,
-		SE  = 2604, WS  = 2716, BW  = 3055
-	},
 	AD1 = {	--943
-		{4222,  360},
-		{4345,  361},
-		{4261,  362},
+		4222,
+		4345,
+		4261,
 	},
 	AD2 = {	--944	(1-2 only)
-		{4868,  605},
-		{4386,  606},
-		{4885,  607},
+		4868,
+		4386,
+		4885,
 	},
 	AD3 = {	--945
-		{4750,  510},
-		{4765,  511},
-		{4690,  512},
+		4750,
+		4765,
+		4690,
 	},
 	AD4 = {	--946
-		{4337,    0},
-		{4452,  283},
-		{4143,  285},
+		4337,
+		4452,
+		4143,
 	},
 	AD5 = {	--947
-		{4712,    0},
-		{4479,  537},
-		{4720,  538},
+		4712,
+		4479,
+		4720,
 	},
 	CC = {	--2064
-		{6050, 2050},
-		{6057, 2058},
-		{6063, 2059},
-		{6025, 2060},
-		{6052, 2061},
-		{6046, 2062},
-		{6047, 2063},
-		{6048, 2064},
+		6050,
+		6057,
+		6063,
+		6025,
+		6052,
+		6046,
+		6047,
+		6048,
 	},
 	CH = {	--957
-		{4602,  612},
-		{4730,  613},
-		{4758,  614},
+		4602,
+		4730,
+		4758,
 	},
 	DB = {	--1444
-		{5540, 1436},
-		{5595, 1438},
-		{5599, 1439},
-		{5596, 1440},
-		{5567, 1441},
-		{5597, 1442},
-		{5598, 1443},
-		{5600, 1444},
+		5540,
+		5595,
+		5599,
+		5596,
+		5567,
+		5597,
+		5598,
+		5600,
 	},
 	DC1 = {	--953
-		{3006,    0},
-		{3235,   30},
-		{3267,   28},
-		{3379,   31},
+		3006,
+		3235,
+		3267,
+		3379,
 	},
 	DC2 = {	--954
-		{ 467,  154},
-		{1633,  155},
-		{ 575,    0},
+		 467,
+		1633,
+		 575,
 	},
 	DC3 = {	--955
-		{ 465,  589},
-		{4972,  590},
-		{4884,  591},
+		 465,
+		4972,
+		4884,
 	},
 	DC4 = {	--956
-		{2192,  516},
-		{2222,  517},
-		{2997,  956},
+		2192,
+		2222,
+		2997,
 	},
 	DC5 = {	--958
-		{4891,    0},
-		{4912,  146},
-		{4960,  147},
+		4891,
+		4912,
+		4960,
 	},
-	EO = {
-		{6324,    0},
-	},
+	EO = { 6324 },
 	EP1 = {	--948
-		{3735,  201},
-		{3634,  204},
-		{3868,  209},
+		3735,
+		3634,
+		3868,
 	},
 	EP2 = {	--949
-		{3797,  363},
-		{3817,  364},
-		{3831,  365},
+		3797,
+		3817,
+		3831,
 	},
 	EP3 = {	--950
-		{4590,  184},
-		{4606,  185},
-		{3910,  186},
+		4590,
+		4606,
+		3910,
 	},
 	EP4 = {	--951
-		{4061,    0},
-		{4115,    0},
-		{4117,  599},
+		4061,
+		4115,
+		4117,
 	},
 	EP5 = {	--952
-		{3968,  335},
-		{4139,  336},
-		{4188,  337},
+		3968,
+		4139,
+		4188,
 	},
 	GD = {
 		BC1 = 4107,
@@ -331,188 +325,208 @@ USPF.data = {
 		TC  = 6578,
 		RPB = 6683,
 		TDC = 6685,
+		CA  = 6740,
+		SR  = 6742,
+		ERE = 6835,
+		GD  = 6837,
+		BS  = 6896,
+		SH  = 7027,
 	},
-	IC = {	--1175
-		{5482, 1175},
-	},
-	MM = {	--2339
-		{6246, 2333},
-		{6266, 2334},
-		{6241, 2335},
-		{6259, 2336},
-		{6243, 2337},
-		{6244, 2338},
-		{6245, 2339},
+	IC = { 5482 },
+	MM = {
+		6246,
+		6266,
+		6241,
+		6259,
+		6243,
+		6244,
+		6245,
 	},
 	MW = {
-		{6003, 1852},
-		{5922, 1869},
-		{5948, 1870},
+		6003,
+		5922,
+		5948,
 	},
-	MO = {
-		{5804,    0},
-	},
+	MO = { 5804 },
 	MQ = {	--1003
-		{4296,  993},
-		{4831,  994},
-		{4474,  995},
-		{4552,  996},
-		{4607,  997},
-		{4764,  998},
-		{4836,  999},
-		{4837, 1000},
-		{4867, 1001},
-		{4832, 1002},
-		{4847, 1003},
+		4296,
+		4831,
+		4474,
+		4552,
+		4607,
+		4764,
+		4836,
+		4837,
+		4867,
+		4832,
+		4847,
 	},
 	NE = {	--2488
-		{6336, 2482},
-		{6304, 2485},
-		{6315, 2488},
+		6336,
+		6304,
+		6315,
 	},
 	RO = {	--1260
-		{5447, 1325},
-		{5468, 1326},
-		{5481, 1327},
+		5447,
+		5468,
+		5481,
 	},
 	TG = {	--1363
-		{5531, 1371},
-		{5534, 1360},
-		{5532, 1370},
-		{5556, 1361},
-		{5549, 1362},
-		{5545, 1363},
+		5531,
+		5534,
+		5532,
+		5556,
+		5549,
+		5545,
 	},
 	SE = {	--2604
-		{6401, 2596},
-		{6409,    0},
-		{6394, 2597},
-		{6399, 2598},
-		{6403, 2599},
-		{6404, 2600},
-		{6393, 2602},
-		{6397, 2603},
-		{6402, 2604},
+		6401,
+		6409,
+		6394,
+		6399,
+		6403,
+		6404,
+		6393,
+		6397,
+		6402,
 	},
-	SO = {
-		{6143,    0},
-	},
+	SO = { 6143 },
 	SU = {	--2208
-		{6132, 2203},
-		{6113, 2206},
-		{6126, 2208},
+		6132,
+		6113,
+		6126,
 	},
 	WS = {	--2722
-		{6476, 2720},
-		{6466, 2722},
-		{6481, 2725},
+		6476,
+		6466,
+		6481,
 	},
-	GO = {
-		{6455,    0},
-	},
-	BO = {
-		{6646,    0},
-	},
+	GO = { 6455 },
+	BO = { 6646 },
 	TR = {
-		{6550, 2930},
-		{6551, 2931},
-		{6547, 2932},
-		{6548, 2933},
-		{6554, 2934},
-		{6566, 2935},
-		{6552, 2937},
-		{6560, 2936},
-		{6570, 2939},
+		6550,
+		6551,
+		6547,
+		6548,
+		6554,
+		6566,
+		6552,
+		6560,
+		6570,
 	},
 	BW = {
-		{6616, 3049},
-		{6619, 3051},
-		{6660, 3054},
+		6616,
+		6619,
+		6660,
 	},
 	TD = {
-		{6723, 3209},
-		{6724, 3210},
-		{6707, 3211},
-		{6708, 3212},
-		{6699, 3213},
-		{6700, 3214},
-		{6696, 3215},
-		{6697, 3216},
-		{6693, 3217},
+		6723,
+		6724,
+		6707,
+		6708,
+		6699,
+		6700,
+		6696,
+		6697,
+		6693,
+	},
+	HI = {
+		6753, -- Peaople of Import
+		6765, -- To Catch a Magus
+		6781, -- A Chance for Peace
+		6762, -- Buried at the Bay - PD quest
+		6768, -- Blood, Books, and Steel - PD quest
+		
+	},
+	GY = {
+		6849, -- A Sea of Troubles - MQ 1
+		6850, -- Tides of Ruin - MQ 2
+		6855, -- Seeds of Destruction - MQ 3
+		6859, -- City Under Siege - MQ 4
+		6852, -- The Dream of Kasorayn - MQ 5
+		6853, -- Guardian of Y'ffelon - MQ 6
+		6847, -- The Hidden Lord - Epilogue 1
+		6848, -- The Ivy Throne - Epilogue 2
+		6894, -- And Now, Perhaps, Peace - Epilogue 3
 	},
 	PD = {
-		AD1	=  468,
-		AD2	=  470,
-		AD3	=  445,
-		AD4	=  460,
-		AD5	=  469,
-		DC1	=  380,
-		DC2	=  714,
-		DC3	=  713,
-		DC4	=  707,
-		DC5	=  708,
-		EP1	=  379,
-		EP2	=  388,
-		EP3	=  372,
-		EP4	=  381,
-		EP5	=  371,
-		CH	=  874,
-		VFW	= 1855,
-		VNC	= 1846,
-		WOO	= 1238,
-		WRK	= 1235,
-		SKW	= 2096,
-		SSH	= 2095,
-		RN	= 2444,
-		OC	= 2445,
-		LT	= 2714,
-		NK	= 2715,
-		SH	= 2994,
-		ZA	= 2995,
+		AD1 =  468,
+		AD2 =  470,
+		AD3 =  445,
+		AD4 =  460,
+		AD5 =  469,
+		DC1 =  380,
+		DC2 =  714,
+		DC3 =  713,
+		DC4 =  707,
+		DC5 =  708,
+		EP1 =  379,
+		EP2 =  388,
+		EP3 =  372,
+		EP4 =  381,
+		EP5 =  371,
+		CH  =  874,
+		VFW = 1855,
+		VNC = 1846,
+		WOO = 1238,
+		WRK = 1235,
+		SKW = 2096,
+		SSH = 2095,
+		RN  = 2444,
+		OC  = 2445,
+		LT  = 2714,
+		NK  = 2715,
+		SH  = 2994,
+		ZA  = 2995,
+		GHB = 3281,
+		SCC = 3283,
 	},
 	SS = {
-		MQ	 = 2521,
-		AD0	 =  431,
-		AD1	 =  695,
-		AD2	 =  682,
-		AD3	 =  683,
-		AD4	 =  684,
-		AD5	 =  685,
-		DC0a =  408,
-		DC0b =  407,
-		DC1	 =  409,
-		DC2	 =  515,
-		DC3	 =  554,
-		DC4	 =  556,
-		DC5	 =  557,
-		EP0a =  405,
-		EP0b =  398,
-		EP1	 =  397,
-		EP2	 =  547,
-		EP3	 =  687,
-		EP4	 =  688,
-		EP5	 =  689,
-		CH	 =  686,
-		CAD	 =  694,
-		CDC	 =  693,
-		CEP	 =  692,
-		CMT	 =  748,
-		LCL	 =  727,
-		UCL	 =  912,
-		IC	 = 1160,
-		WR	 = 1320,
-		HB	 = 1347,
-		GC	 = 1342,
-		VV	 = 1843,
-		CC	 = 1844,
-		SU	 = 1845,
-		MM	 = 2291,
-		NE	 = 2461,
-		SE	 = 2562,
-		WS	 = 2687,
-		TR	 = 2857,
-		BW	 = 2982,
-		TD	 = 3140,
+		-- First skyshard ID, count
+		MQ   = {259,  1},
+		AD0  = { 87,  6},
+		AD1  = { 93, 16},
+		AD2  = {109, 16},
+		AD3  = {125, 16},
+		AD4  = {141, 16},
+		AD5  = {157, 16},
+		DC0a = {176,  3},
+		DC0b = {173,  3},
+		DC1  = {179, 16},
+		DC2  = {195, 16},
+		DC3  = {211, 16},
+		DC4  = {227, 16},
+		DC5  = {243, 16},
+		EP0a = {  4,  3},
+		EP0b = {  1,  3},
+		EP1  = {  7, 16},
+		EP2  = { 23, 16},
+		EP3  = { 39, 16},
+		EP4  = { 55, 16},
+		EP5  = { 71, 16},
+		CH   = {260, 16},
+		CAD  = {306, 15},
+		CDC  = {291, 15},
+		CEP  = {276, 15},
+		CMT  = {321,  1},
+		LCL  = {322, 12},
+		UCL  = {334,  6},
+		IC   = {340, 13},
+		WR   = {353, 17},
+		HB   = {370,  6},
+		GC   = {376,  6},
+		VV   = {382, 18},
+		CC   = {400,  6},
+		SU   = {406, 18},
+		MM   = {424,  6},
+		NE   = {430, 18},
+		SE   = {448,  6},
+		WS   = {454, 18},
+		TR   = {472,  6},
+		BW   = {478, 18},
+		TD   = {496,  6},
+		HI   = {504, 18},
+		GY   = {522,  6},
 	},
 	racialLineIds = {
 		--RaceId	SkillLineId	Race
@@ -569,9 +583,9 @@ end
 local function GetQuestTooltipText(zone)
 	local quests = {}
 	local isCurrentCharacter = GCCId() == selectedChar
-	for _, zoneData in ipairs(USPF.data[zone]) do
-		local questName = GetQuestName(zoneData[1])
-		local earned = zoneData[2] == 0 and GCQI(zoneData[1]) ~= "" or IAchC(zoneData[2])
+	for _, questId in ipairs(USPF.data[zone]) do
+		local questName = GetQuestName(questId)
+		local earned = GCQI(questId) ~= ""
 		table.insert(quests, FormatQuestName(questName, isCurrentCharacter and earned))
 	end
 	return table.concat(quests, "\n")
@@ -749,10 +763,10 @@ local function USPF_UpdateGUITable(sVarPtsData)
 		EP0a = GS(USPF_QUEST_NONE).."\n\n"..GetZoneTooltipText("EP0a"),
 		EP0b = GS(USPF_QUEST_NONE).."\n\n"..GetZoneTooltipText("EP0b"),
 		EP1	 = GetQuestTooltipText("EP1").."\n\n"..GetZoneTooltipText("EP1"),
-		EP2	 = GetQuestTooltipText("EP1").."\n\n"..GetZoneTooltipText("EP2"),
-		EP3	 = GetQuestTooltipText("EP2").."\n\n"..GetZoneTooltipText("EP3"),
-		EP4	 = GetQuestTooltipText("EP3").."\n\n"..GetZoneTooltipText("EP4"),
-		EP5	 = GetQuestTooltipText("EP4").."\n\n"..GetZoneTooltipText("EP5"),
+		EP2	 = GetQuestTooltipText("EP2").."\n\n"..GetZoneTooltipText("EP2"),
+		EP3	 = GetQuestTooltipText("EP3").."\n\n"..GetZoneTooltipText("EP3"),
+		EP4	 = GetQuestTooltipText("EP4").."\n\n"..GetZoneTooltipText("EP4"),
+		EP5	 = GetQuestTooltipText("EP5").."\n\n"..GetZoneTooltipText("EP5"),
 		IC	 = GetQuestTooltipText("IC").."\n\n"..GetZoneTooltipText("IC"),
 		LCL	 = GS(USPF_QUEST_NONE).."\n\n"..GetZoneTooltipText("LCL"),
 		UCL	 = GS(USPF_QUEST_NONE).."\n\n"..GetZoneTooltipText("UCL"),
@@ -772,6 +786,8 @@ local function USPF_UpdateGUITable(sVarPtsData)
 		TR   = GetQuestTooltipText("TR").."\n\n"..GetZoneTooltipText("TR"),
 		BW   = GetQuestTooltipText("BW").."\n\n"..GetZoneTooltipText("BW"),
 		TD   = GetQuestTooltipText("TD").."\n\n"..GetZoneTooltipText("TD"),
+		HI   = GetQuestTooltipText("HI").."\n\n"..GetZoneTooltipText("HI"),
+		GY   = GetQuestTooltipText("GY").."\n\n"..GetZoneTooltipText("GY"),
 	}
 
 	USPF.GUI = {
@@ -831,6 +847,8 @@ local function USPF_UpdateGUITable(sVarPtsData)
 			{40, zf("<<C:1>>",			GZNBId(USPF.data.ZId.ZN.TR)),						GetSV(sVarPtsData.ZQ.TR),	USPF.ptsTots.ZQ.TR,		GetSV(sVarPtsData.SS.TR),	USPF.ptsTots.SS.TR,		questTooltips.TR},
 			{41, zf("<<C:1>>",			GZNBId(USPF.data.ZId.ZN.BW)),						GetSV(sVarPtsData.ZQ.BW),	USPF.ptsTots.ZQ.BW,		GetSV(sVarPtsData.SS.BW),	USPF.ptsTots.SS.BW,		questTooltips.BW},
 			{42, zf("<<C:1>>",			GZNBId(USPF.data.ZId.ZN.TD)),						GetSV(sVarPtsData.ZQ.TD),	USPF.ptsTots.ZQ.TD,		GetSV(sVarPtsData.SS.TD),	USPF.ptsTots.SS.TD,		questTooltips.TD},
+			{43, zf("<<C:1>>",			GZNBId(USPF.data.ZId.ZN.HI)),						GetSV(sVarPtsData.ZQ.HI),	USPF.ptsTots.ZQ.HI,		GetSV(sVarPtsData.SS.HI),	USPF.ptsTots.SS.HI,		questTooltips.HI},
+			{44, zf("<<C:1>>",			GZNBId(USPF.data.ZId.ZN.GY)),						GetSV(sVarPtsData.ZQ.GY),	USPF.ptsTots.ZQ.GY,		GetSV(sVarPtsData.SS.GY),	USPF.ptsTots.SS.GY,		questTooltips.GY},
 		},
 		SQS_SL_T = strF("%d/%d", sVarPtsData.ZQTot, USPF.ptsTots.ZQTot),
 		SQS_SS_T = strF("%d/%d", sVarPtsData.SSTot, USPF.ptsTots.SSTot),
@@ -881,6 +899,12 @@ local function USPF_UpdateGUITable(sVarPtsData)
 			{44, zf("<<C:1>>", GZNBId(USPF.data.ZId.ZN.EP2)),	zf("<<C:1>>", GZNBId(USPF.data.ZId.GDN.TC)),	GetSV(sVarPtsData.GD.TC),	USPF.ptsTots.GD.TC,		GetGDQuestTooltipText("TC")},
 			{45, zf("<<C:1>>", GZNBId(USPF.data.ZId.ZN.DC1)),	zf("<<C:1>>", GZNBId(USPF.data.ZId.GDN.RPB)),	GetSV(sVarPtsData.GD.RPB),	USPF.ptsTots.GD.RPB,	GetGDQuestTooltipText("RPB")},
 			{46, zf("<<C:1>>", GZNBId(USPF.data.ZId.ZN.BW)),	zf("<<C:1>>", GZNBId(USPF.data.ZId.GDN.TDC)),	GetSV(sVarPtsData.GD.TDC),	USPF.ptsTots.GD.TDC,	GetGDQuestTooltipText("TDC")},
+			{47, zf("<<C:1>>", GZNBId(USPF.data.ZId.ZN.SU)),	zf("<<C:1>>", GZNBId(USPF.data.ZId.GDN.CA)),	GetSV(sVarPtsData.GD.CA),	USPF.ptsTots.GD.CA,		GetGDQuestTooltipText("CA")},
+			{48, zf("<<C:1>>", GZNBId(USPF.data.ZId.ZN.DC3)),	zf("<<C:1>>", GZNBId(USPF.data.ZId.GDN.SR)),	GetSV(sVarPtsData.GD.SR),	USPF.ptsTots.GD.SR,		GetGDQuestTooltipText("SR")},
+			{49, zf("<<C:1>>", GZNBId(USPF.data.ZId.ZN.HI)),	zf("<<C:1>>", GZNBId(USPF.data.ZId.GDN.ERE)),	GetSV(sVarPtsData.GD.ERE),	USPF.ptsTots.GD.ERE,		GetGDQuestTooltipText("ERE")},
+			{50, zf("<<C:1>>", GZNBId(USPF.data.ZId.ZN.HI)),	zf("<<C:1>>", GZNBId(USPF.data.ZId.GDN.GD)),	GetSV(sVarPtsData.GD.GD),	USPF.ptsTots.GD.GD,		GetGDQuestTooltipText("GD")},
+			{51, zf("<<C:1>>", GZNBId(USPF.data.ZId.ZN.EP1)),	zf("<<C:1>>", GZNBId(USPF.data.ZId.GDN.BS)),	GetSV(sVarPtsData.GD.BS),	USPF.ptsTots.GD.BS,		GetGDQuestTooltipText("BS")},
+			{52, zf("<<C:1>>", GZNBId(USPF.data.ZId.ZN.EP5)),	zf("<<C:1>>", GZNBId(USPF.data.ZId.GDN.SH)),	GetSV(sVarPtsData.GD.SH),	USPF.ptsTots.GD.SH,		GetGDQuestTooltipText("SH")},
 		},
 		GDQ_T = strF("%s: %d/%d", GS(USPF_GUI_TOTAL), sVarPtsData.GDTot, USPF.ptsTots.GDTot),
 		PDGBE = {
@@ -912,6 +936,8 @@ local function USPF_UpdateGUITable(sVarPtsData)
 			{26, zf("<<C:1>>", GZNBId(USPF.data.ZId.ZN.BGC)),	zf("<<C:1>>", GZNBId(USPF.data.ZId.PDN.NK)),	GetSV(sVarPtsData.PD.NK),		USPF.ptsTots.PD.NK,		GetPDTooltipText("NK")},
 			{27, zf("<<C:1>>", GZNBId(USPF.data.ZId.ZN.BW)),	zf("<<C:1>>", GZNBId(USPF.data.ZId.PDN.SH)),	GetSV(sVarPtsData.PD.SH),		USPF.ptsTots.PD.SH,		GetPDTooltipText("SH")},
 			{28, zf("<<C:1>>", GZNBId(USPF.data.ZId.ZN.BW)),	zf("<<C:1>>", GZNBId(USPF.data.ZId.PDN.ZA)),	GetSV(sVarPtsData.PD.ZA),		USPF.ptsTots.PD.ZA,		GetPDTooltipText("ZA")},
+			{29, zf("<<C:1>>", GZNBId(USPF.data.ZId.ZN.HI)),	zf("<<C:1>>", GZNBId(USPF.data.ZId.PDN.GHB)),	GetSV(sVarPtsData.PD.GHB),		USPF.ptsTots.PD.GHB,		GetPDTooltipText("GHB")},
+			{30, zf("<<C:1>>", GZNBId(USPF.data.ZId.ZN.HI)),	zf("<<C:1>>", GZNBId(USPF.data.ZId.PDN.SCC)),	GetSV(sVarPtsData.PD.SCC),		USPF.ptsTots.PD.SCC,		GetPDTooltipText("SCC")},
 		},
 		PDGBE_T = strF("%s: %d/%d", GS(USPF_GUI_TOTAL), sVarPtsData.PDTot, USPF.ptsTots.PDTot),
 		CharacterTot = strF("%s: %d/%d (%s %s)", GS(USPF_GUI_CHAR_TOTAL), sVarPtsData.Tot, USPF.ptsTots.Tot, sVarPtsData.Unassigned and tostring(sVarPtsData.Unassigned) or "?", GS(USPF_GUI_UNASSIGNED)),
@@ -946,28 +972,28 @@ end
 local function USPF_SetQuestPoints()
 	--Main Quest Skill Points
 	for i=1, #USPF.data.MQ do
-		USPF.ptsData.MainQ = USPF.ptsData.MainQ + (IAchC(USPF.data.MQ[i][2]) and 1 or 0)
+		USPF.ptsData.MainQ = USPF.ptsData.MainQ + ((GCQI(USPF.data.MQ[i]) ~= "") and 1 or 0)
 	end
 
 	--Morrowind Only Character Quest Skill Points
-	USPF.ptsData.MWChar = (GCQI(USPF.data.MO[1][1]) ~= "" or USPF.settings.MWC) and 1 or 0
+	USPF.ptsData.MWChar = (GCQI(USPF.data.MO[1]) ~= "" or USPF.settings.MWC) and 1 or 0
 
 	--Summerset Only Character Quest Skill Points
-	USPF.ptsData.SUChar = (GCQI(USPF.data.SO[1][1]) ~= "" or USPF.settings.SSC) and 1 or 0
+	USPF.ptsData.SUChar = (GCQI(USPF.data.SO[1]) ~= "" or USPF.settings.SSC) and 1 or 0
 
 	--Elsweyr Only Character Quest Skill Points
-	USPF.ptsData.EWChar = (GCQI(USPF.data.EO[1][1]) ~= "" or USPF.settings.EWC) and 1 or 0
+	USPF.ptsData.EWChar = (GCQI(USPF.data.EO[1]) ~= "" or USPF.settings.EWC) and 1 or 0
 
 	--Greymoor Only Character Quest Skill Points
-	USPF.ptsData.GMChar = (GCQI(USPF.data.GO[1][1]) ~= "" or USPF.settings.GMC) and 1 or 0
+	USPF.ptsData.GMChar = (GCQI(USPF.data.GO[1]) ~= "" or USPF.settings.GMC) and 1 or 0
 
 	--Blackwood Only Character Quest Skill Points
-	USPF.ptsData.BWChar = (GCQI(USPF.data.BO[1][1]) ~= "" or USPF.settings.BWC) and 1 or 0
+	USPF.ptsData.BWChar = (GCQI(USPF.data.BO[1]) ~= "" or USPF.settings.BWC) and 1 or 0
 
 	for k,_ in pairs(USPF.ptsData.ZQ) do
 		if USPF.data[k] ~= nil then
 			for i=1, #USPF.data[k] do
-				USPF.ptsData.ZQ[k] = USPF.ptsData.ZQ[k] + ((USPF.data[k][i][2] == 0 and (GCQI(USPF.data[k][i][1]) ~= "") or IAchC(USPF.data[k][i][2])) and 1 or 0)
+				USPF.ptsData.ZQ[k] = USPF.ptsData.ZQ[k] + ((GCQI(USPF.data[k][i]) ~= "") and 1 or 0)
 			end
 			USPF.ptsData.ZQTot = USPF.ptsData.ZQTot + USPF.ptsData.ZQ[k]
 		end
@@ -1011,12 +1037,11 @@ end
 
 local function USPF_SetSkyshardPoints()
 	for k,_ in pairs(USPF.ptsData.SS) do
-		if IAchC(USPF.data.SS[k]) then USPF.ptsData.SS[k] = GAchNCr(USPF.data.SS[k])
-		else
-			for i = 1, GAchNCr(USPF.data.SS[k]) do
-				local _, numCompleted = GAchCr(USPF.data.SS[k], i)
-				if numCompleted > 0 then USPF.ptsData.SS[k] = USPF.ptsData.SS[k] + 1 end
-			end
+        local v = USPF.data.SS[k]
+		for i=v[1], v[1] + v[2] - 1 do
+            if GetSkyshardDiscoveryStatus(i) == SKYSHARD_DISCOVERY_STATUS_ACQUIRED then
+                USPF.ptsData.SS[k] = USPF.ptsData.SS[k] + 1
+            end
 		end
 		USPF.ptsData.numSSTot = USPF.ptsData.numSSTot + USPF.ptsData.SS[k]
 	end
@@ -1288,6 +1313,7 @@ function USPF:UpdateDataLines()
 			zone = tempTable[i][2],
 			quests = USPF_FormatProgress(tempTable[i][3], tempTable[i][4], SQS_ColorZQ),
 			skyshards = USPF_FormatProgress(tempTable[i][5], tempTable[i][6], SQS_ColorSS),
+			tooltip = tempTable[i][7]
 		})
 	end
 
@@ -1297,6 +1323,7 @@ function USPF:UpdateDataLines()
 			zone = tempTable[i][2],
 			dungeon = tempTable[i][3],
 			progress = USPF_FormatProgress(tempTable[i][4], tempTable[i][5], GDQ_Color),
+			tooltip = tempTable[i][6]
 		})
 	end
 
@@ -1306,6 +1333,7 @@ function USPF:UpdateDataLines()
 			zone = tempTable[i][2],
 			dungeon = tempTable[i][3],
 			progress = USPF_FormatProgress(tempTable[i][4], tempTable[i][5], PDB_Color),
+			tooltip = tempTable[i][6]
 		})
 	end
 
@@ -1441,9 +1469,9 @@ function USPF:InitializeDataLines()
 		currData = USPF_GUI_Body_SQS_ListHolder.dataLines[i]
 		USPF:FillLine(currLine, currData)
 
-		if USPF.GUI.SQS[i][7] ~= nil then
+		if currData.tooltip ~= nil then
 			-- tooltip text
-			USPF_GUI_Body_SQS_ListHolder.lines[i].data = {tooltipText = USPF.GUI.SQS[i][7]}
+			USPF_GUI_Body_SQS_ListHolder.lines[i].data = {tooltipText = currData.tooltip}
 
 			-- tooltip handlers
 			USPF_GUI_Body_SQS_ListHolder.lines[i]:SetHandler("OnMouseEnter", ZO_Options_OnMouseEnter)
@@ -1456,9 +1484,9 @@ function USPF:InitializeDataLines()
 		currData = USPF_GUI_Body_GDQ_ListHolder.dataLines[i]
 		USPF:FillLine(currLine, currData)
 
-		if USPF.GUI.GDQ[i][6] ~= nil then
+		if currData.tooltip ~= nil then
 			-- tooltip text
-			USPF_GUI_Body_GDQ_ListHolder.lines[i].data = {tooltipText = USPF.GUI.GDQ[i][6]}
+			USPF_GUI_Body_GDQ_ListHolder.lines[i].data = {tooltipText = currData.tooltip}
 
 			-- tooltip handlers
 			USPF_GUI_Body_GDQ_ListHolder.lines[i]:SetHandler("OnMouseEnter", ZO_Options_OnMouseEnter)
@@ -1471,9 +1499,9 @@ function USPF:InitializeDataLines()
 		currData = USPF_GUI_Body_PDGBE_ListHolder.dataLines[i]
 		USPF:FillLine(currLine, currData)
 
-		if USPF.GUI.PDGBE[i][6] ~= nil then
+		if currData.tooltip ~= nil then
 			-- tooltip text
-			USPF_GUI_Body_PDGBE_ListHolder.lines[i].data = {tooltipText = USPF.GUI.PDGBE[i][6]}
+			USPF_GUI_Body_PDGBE_ListHolder.lines[i].data = {tooltipText = currData.tooltip}
 
 			-- tooltip handlers
 			USPF_GUI_Body_PDGBE_ListHolder.lines[i]:SetHandler("OnMouseEnter", ZO_Options_OnMouseEnter)
@@ -1485,7 +1513,7 @@ end
 function USPF:ToggleWindow()
 	USPF.active = not USPF.active
 	if USPF.active then USPF:UpdateDataLines() end
-	USPF_GUI:SetHidden(not USPF.active)
+	SCENE_MANAGER:ToggleTopLevel(USPF_GUI)
 end
 
 
@@ -1959,6 +1987,8 @@ local function USPF_Initialized(eventCode, addonName)
 
 	--Call startup routine.
 	USPF:SetupValues()
+
+	SCENE_MANAGER:RegisterTopLevel(USPF_GUI, locksUIMode)
 
 	--Create the event handlers.
 	EVENT_MANAGER:RegisterForEvent(USPF.AddonName, EVENT_SKILL_POINTS_CHANGED, USPF_SkillPointsUpdate)
